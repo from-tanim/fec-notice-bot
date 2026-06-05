@@ -1,0 +1,28 @@
+name: FEC Notice Bot
+
+on:
+  schedule:
+    # Runs every 5 minutes (This is what Render charges for)
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allows you to manually run it from GitHub.com
+
+jobs:
+  check-notices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+        
+      - name: Run Bot
+        run: python fec_notice_bot.py
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
