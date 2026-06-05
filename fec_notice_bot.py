@@ -5,6 +5,11 @@ import os
 from datetime import datetime
 import time
 
+import os
+
+BOT_TOKEN = os.environ.get('7759430951:AAEar9Ld2dqKEjC_Kn__HdMYAfQogQ_HGiM')
+CHAT_ID = os.environ.get('5814642141')
+
 # ========== CONFIGURATION ==========
 # REPLACE THESE WITH YOUR ACTUAL VALUES!
 BOT_TOKEN = "7759430951:AAEar9Ld2dqKEjC_Kn__HdMYAfQogQ_HGiM"  # Paste your bot token here
