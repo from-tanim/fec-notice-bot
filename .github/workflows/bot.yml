@@ -2,19 +2,18 @@ name: FEC Notice Bot
 
 on:
   schedule:
-    # Runs every 5 minutes (This is what Render charges for)
     - cron: '*/5 * * * *'
-  workflow_dispatch: # Allows you to manually run it from GitHub.com
+  workflow_dispatch:
 
 jobs:
   check-notices:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4  # ✅ v4 works with Node 24
       
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5  # ✅ v5 works with Node 24
         with:
           python-version: '3.10'
           
