@@ -7,13 +7,13 @@ import time
 
 import os
 
-BOT_TOKEN = os.environ.get('7759430951:AAEar9Ld2dqKEjC_Kn__HdMYAfQogQ_HGiM')
-CHAT_ID = os.environ.get('5814642141')
+BOT_TOKEN = os.environ.get('BOT_TOKEN')
+CHAT_ID = os.environ.get('CHAT_ID')
 
 # ========== CONFIGURATION ==========
 # REPLACE THESE WITH YOUR ACTUAL VALUES!
-BOT_TOKEN = "7759430951:AAEar9Ld2dqKEjC_Kn__HdMYAfQogQ_HGiM"  # Paste your bot token here
-CHAT_ID = "5814642141"      # Paste your chat ID here
+BOT_TOKEN = "BOT_TOKEN"  # Paste your bot token here
+CHAT_ID = "CHAT_ID"      # Paste your chat ID here
 NOTICE_URL = "https://fec.ac.bd/pages/notices"
 
 # File to store already sent notices
